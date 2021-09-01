@@ -4,11 +4,13 @@
   "description": "API for image resizing and provide placeholders",
   "main": "index.js",
   "scripts": {
-    "pretty": "npx prettier --write .",
+    "pretty": "npx prettier .",
     "lint": "eslint . --ext .ts",
-    "start": "nodemon ./src/index.ts",
+    "start": "nodemon ./src/index.ts --trace-warnings",
+    "jasmine": "jasmine",
     "build": "npx tsc",
-    "deploy": "npm run build && npm start"
+    "test": "npm run build && npm run jasmine",
+    "deploy": "npm run build && npm run jasmine && npm start"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,10 @@
     "@types/express": "^4.17.13",
     "@types/jasmine": "^3.8.2",
     "@types/node": "^16.7.5",
+    "@types/sharp": "^0.28.6",
+    "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
-    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
     "nodemon": "^2.0.12",
@@ -36,8 +39,11 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
+    "eslint": "^7.32.0",
     "express": "^4.17.1",
     "jasmine": "^3.9.0",
-    "jasmine-spec-reporter": "^7.0.0"
+    "jasmine-spec-reporter": "^7.0.0",
+    "sharp": "^0.29.0",
+    "supertest": "^6.1.6"
   }
 }
