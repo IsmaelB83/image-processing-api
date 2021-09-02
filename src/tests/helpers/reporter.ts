@@ -1,3 +1,4 @@
+// Node imports
 import {DisplayProcessor, SpecReporter, StacktraceOption} from "jasmine-spec-reporter";
 import SuiteInfo = jasmine.SuiteInfo;
 
@@ -14,3 +15,4 @@ jasmine.getEnv().addReporter(new SpecReporter({
     },
     customProcessors: [CustomProcessor],
 }));
+

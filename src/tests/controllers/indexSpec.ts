@@ -1,4 +1,6 @@
+// Node imports
 import supertest from 'supertest';
+// Own imports
 import app from '../../index';
 
 const request = supertest(app);

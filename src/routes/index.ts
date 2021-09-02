@@ -1,4 +1,6 @@
+// Node imports
 import { Router } from 'express';
+// Own imports
 import controller from '../controllers';
 
 const routes = Router();
