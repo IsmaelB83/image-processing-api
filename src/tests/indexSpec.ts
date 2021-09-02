@@ -3,10 +3,11 @@ import app from '../index';
 
 const request = supertest(app);
 
-describe('Test image endpoint responses', () => {
+describe('Test API endpoint responses', () => {
   it('Gets the api endpoint', async (done) => {
-    const response = await request.get('/images');
-    expect(response.status).toBe(401);
+    const response = await request.get('/');
+    expect(response.status).toBe(200);
     done();
   });
+
 });
